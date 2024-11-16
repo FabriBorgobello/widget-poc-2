@@ -1,4 +1,5 @@
-import ReactDOM from "react-dom/client"; // Note the new import
+import ReactDOM from "react-dom/client";
+import { LazyMotion, domAnimation } from "motion/react";
 import { Widget } from "./components/Widget";
 
 function injectWidget() {
@@ -12,7 +13,11 @@ function injectWidget() {
 
   // Create a React root and render the widget
   const root = ReactDOM.createRoot(container);
-  root.render(<Widget />);
+  root.render(
+    <LazyMotion features={domAnimation}>
+      <Widget />
+    </LazyMotion>
+  );
 }
 
 // Inject the widget into the page
