@@ -1,6 +1,5 @@
 import { LazyMotion, domAnimation } from "motion/react";
 import * as m from "framer-motion/m";
-
 export const Widget = () => {
   return (
     <LazyMotion features={domAnimation}>
