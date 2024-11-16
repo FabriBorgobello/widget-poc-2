@@ -4,7 +4,11 @@ import * as m from "framer-motion/m";
 export const Widget = () => {
   return (
     <LazyMotion features={domAnimation}>
-      <m.div animate={{ opacity: 1 }}>
+      <m.div
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        transition={{ duration: 3 }}
+      >
         <div
           style={{
             border: "1px solid #ccc",
